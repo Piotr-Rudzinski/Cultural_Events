@@ -1,0 +1,191 @@
+.tlo {
+    background-color: silver;
+    width : 1280
+}
+
+.naglowek {
+
+}
+
+.flaga {
+    padding-left:5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px, 0px, 0px 0px;
+    align-items: center;
+    
+
+}
+
+.logowanie {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    border-radius: 4px;
+    background-color: slategrey;
+    text-decoration: none;    
+    font-size: 16px;
+    color: white;
+    font : Arial;
+}
+
+.login {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display : inline
+}
+
+.logotyp {
+    height: 30px;
+    width: 100px;
+    padding-right: 550px;
+}
+
+
+.aa {
+    margin-top: 20px;
+}
+
+.tytul_tekst {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left : 24%;
+    padding-right :24%;
+    margin-top : 100px;
+    margin-bottom : 20px;
+    background-color: #DADADA;
+    border-radius: 5px;
+    border-width: 15px;
+    border-color: black;
+    font-size : 20px;
+    font : TSahoma;
+    font-weight: bold;
+    color : white;
+
+}
+
+
+
+.web-search {
+    height : 120px;
+    display : block;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom : 5px;
+}
+
+.search-table {
+    display : table;
+    width : 100%;
+}
+
+.search1 {
+    display : table-row;
+}
+
+.search-select-style {
+    font-size : 14px;
+    font-family : Arial;
+    border-radius: 5px;
+    border-color: rgb(71, 203, 255);
+    width : 250px;
+    height : 20px;
+}
+
+.column_table_1 {
+    width: 400px;
+    height : 20px;
+}
+
+.column_table_2 {
+    font-size : 14px;
+    font-family : Arial;
+    border-radius: 5px;
+    border-color: rgb(71, 203, 255);
+    width : 750px;
+    height : 20px;
+}
+
+.search-select-style {
+    font-size : 14px;
+    font-family : Arial;
+    border-radius: 5px;
+    border-color: rgb(71, 203, 255);
+    width : 250px;
+    height : 20px;
+}
+
+.search {
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-left: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: steelblue;
+    border-radius: 5px;
+    text-decoration: none; 
+}
+
+.row {
+    width : 1280px;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.city {
+    width: 100px;
+    height : 30px;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    color: black;
+    padding-left: 5px;
+}
+
+.date {
+    width: 100px;
+    height : 30px;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.time {
+    width: 100px;
+    height : 30px;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.name {
+    width: 700px;
+    height : 30px;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    font-color: black;
+}
+
+
+.place {
+    width: 200px;
+    height : 30px;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    color: black;
+}

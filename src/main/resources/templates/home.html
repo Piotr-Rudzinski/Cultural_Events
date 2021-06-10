@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <title>Przewodnik kulturalny</title>
+        <link rel="stylesheet" type="text/css" href="css/style_home.css">
+    </head>
+    
+    <body class="tlo" background="images/malgorzata-twardo-VLVEBI7gjqI-unsplash.jpg">
+        <div class="main-column">
+            <div class="first-line">
+                <div class="logotype">
+                    <a href=""><img class="logotyp" src="images/images.png"></a>
+                </div>
+                <div>
+                    <a class="login" href="" >Zaloguj się</a>
+                </div>
+                <div class="flag">
+                    <a href=""><img class="flaga" src="images/de.png"></a>
+                </div>
+                <div class="flag">
+                    <a href=""><img class="flaga" src="images/en.png"></a>
+                </div>
+                <div class="flag">
+                    <a href=""><img class="flaga" src="images/pl.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-line">
+            <p class="title">WYSZUKWIARKA WYDARZEŃ KULTURALNYCH</p>
+        </div>
+
+        <div class="search-line">
+            <div class="first-line">
+                <div class="search-line-type">
+                    <select class="search-line-type-style" name="searchType">
+                        <option value="wszystkie_rodzaje" selected>Wszystkie rodzaje</option>
+                        <option value="kino">kino</option>
+                        <option value="teatr">teatr</option>
+                        <option value="koncert">koncert</option>
+                        <option value="inne">inne</option>
+                    </select>
+                </div>
+                <div class="search-line-type">
+                    <select class="search-line-type-style" name="searchCity">
+                        <option value="wszystkie_rodzaje" selected>Wszystkie miasta</option>
+                        <option value="kino">Gdańsk</option>
+                        <option value="teatr">Sopot</option>
+                        <option value="koncert">Gdynia</option>
+                        <option value="inne">inne</option>
+                    </select>
+                </div>
+                <div class="search-line-direction">
+                    <select class="search-line-direction-style" name="searchDirection" id="searchDirection">
+                        <option value="ascending" selected>Sortuj rosnąco</option>
+                        <option value="descending">Sortuj malejąco</option>
+                    </select>
+                </div>
+                <div  class="search-line-direction">
+                    <a class="search" href="" >Szukaj</a>
+                </div>
+            </div>
+            <div class="first-line">
+                <div class="name-input">
+                    <input class="event-input" type="text" value="" placeholder="Wpisz tytuł wydarzenia" autocomplete="off" />
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="header-line">
+            <div class="header-city">
+                <p class="header-city-paragraph">Miasto</p>
+            </div>
+            <div class="header-date">
+                <p class="header-date-paragraph">Data</p>
+            </div>
+            <div class="header-hour">
+                <p class="header-hour-paragraph">Godzina</p>
+            </div>
+            <div class="header-event-name">
+                <p class="header-event-name-paragraph">Nazwa wydarzenia</p>
+            </div>
+            <div class="header-favourite-name">
+                <p class="header-favourite-paragraph">Ulubione</p>
+            </div>
+        </div>
+
+        <div th:each="eventNew: ${eventsNewKey}" class="event-section">
+            <div class="event-line">
+                <div class="event-city">
+                    <p class="event-city-paragraph" th:text="${eventNew.getPlace().getName()}">Miasto</p>
+                </div>
+                <div class="event-date">
+                    <p class="event-date-paragraph" th:text="${eventNew.getStartDate()}">Data</p>
+                </div>
+                <div class="event-time">
+                    <p class="event-time-paragraph" th:text="${eventNew.getStartDate()}">Godzina</p>
+                </div>
+                <div class="event-name">
+                    <p class="event-name-paragraph" th:text="${eventNew.getName()}">Nazwa</p>
+                </div>
+                <div class="event-fav">
+                    <p class="event-fav-paragraph" th:text="${eventNew.getOrganizer().getName()}">Ulubione</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="separating-line-div">
+            <hr class="separating-line">
+        </div>
+
+
+
+
+    </body>
+</html>

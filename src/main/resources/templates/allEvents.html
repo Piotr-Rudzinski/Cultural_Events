@@ -1,0 +1,188 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TFU - Lista wydarzeń</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/navbar.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style_home.css">
+  <link rel="stylesheet" type="text/css" href="css/bsstyle.css">
+</head>
+<body>
+<header>
+  <div class="container-fluid header-style">
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-1">
+        <img src="images/16597512641621316808-128.png" style="width: 48px" alt="Logotype">
+      </div>
+      <div class="col-md-3">
+        <ul class="nav col-10 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="margin-right: 400px">
+          <li><a href="/main" class="nav-link px-2 text-secondary">Strona główna</a></li>
+          <li><a href="/allEvents" class="nav-link px-2 text-white">Lista wydarzeń</a></li>
+          <li><a href="/faq" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="/aboutUs" class="nav-link px-2 text-white">O nas</a></li>
+          <li><a href="/contact" class="nav-link px-2 text-white">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-4">
+        <form class="form-header-button" style="display:inline!important" action="#" method="post" th:action="@{/login}">
+          <button type="submit" name="login" class="btn btn-outline-light me-2 button-header">Zaloguj się</button>
+        </form>
+        <form class="form-header-button" style="display:inline!important" action="#" method="post" th:action="@{/register}">
+          <button type="submit" name="register" class="btn btn-warning">Rejestracja</button>
+        </form>
+        <img src="images/pl.png" style="width: 32px; margin-left: 50px; margin-right: 20px" alt="pl">
+        <img src="images/en.png" style="width: 32px; margin-right: 20px" alt="pl">
+        <img src="images/de.png" style="width: 32px; " alt="pl">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+
+  <div class="mx-5 my-2 bg-light rounded-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Strona główna</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Lista wydarzeń</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="container jumbo">
+      <h1 class="display-5 fw-bold">Wyszukiwarka wydarzeń</h1>
+  </div>
+
+
+
+    <div class="container bg-light rounded-3">
+        <div class="row head-border">
+            <div class="col-md-3">
+                <select class="dropdown-fields dropdown-field-type" name="searchType">
+                  <option value="wszystkie_rodzaje" selected>Wszystkie rodzaje</option>
+                  <option value="kino">kino</option>
+                  <option value="teatr">teatr</option>
+                  <option value="koncert">koncert</option>
+                  <option value="inne">inne</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="dropdown-fields dropdown-field-city" name="searchCity">
+                  <option value="wszystkie_rodzaje" selected>Wszystkie miasta</option>
+                  <option value="kino">Gdańsk</option>
+                  <option value="teatr">Sopot</option>
+                  <option value="koncert">Gdynia</option>
+                  <option value="inne">inne</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+              <select class="dropdown-fields dropdown-field-city" name="searchCity">
+                <option value="wszystkie_rodzaje" selected>Sortuj po dacie</option>
+                <option value="kino">Sortuj po miejscowości</option>
+                <option value="teatr">Sortuj po tytule</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="dropdown-fields dropdown-field-direction" name="searchDirection" id="searchDirection">
+                <option value="ascending" selected>Sortuj rosnąco</option>
+                <option value="descending">Sortuj malejąco</option>
+              </select>
+            </div>
+        </div>
+    </div>
+
+  <div class="container bg-light rounded-3 mb-2">
+    <div class="row head-border">
+      <div class="col-md-6">
+        <input class="dropdown-fields event-name-input" type="text" value="" placeholder="Wpisz tytuł wydarzenia" autocomplete="off" />
+      </div>
+      <div class="col-md-3">
+        <select class="dropdown-fields dropdown-field-quantity" name="searchCity">
+          <option value="quantity_20" selected>20 wyników</option>
+          <option value="quantity_40">40 wyników</option>
+          <option value="quantity_60">60 wyników</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="button-search">Szukaj</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container main-table">
+    <div class="row" >
+      <div class="col-md-1 low-padding">
+        <p class="header-city-paragraph">Miasto</p>
+      </div>
+      <div class="col-md-1">
+        <p class="header-city-paragraph table-date-paragraph">Data</p>
+      </div>
+      <div class="col-md-1">
+        <p class="header-city-paragraph">Godzina</p>
+      </div>
+      <div class="col-md-8">
+        <p class="header-city-paragraph">Nazwa wydarzenia</p>
+      </div>
+      <div class="col-md-1">
+        <p class="header-city-paragraph">Ulubione</p>
+      </div>
+    </div>
+  </div>
+
+  <div th:each="eventSimple: ${collectionOfEventSimple}" class="container main-table">
+      <div class="row" >
+          <div class="col-md-1 low-padding">
+            <p class="table-city-paragraph" th:text="${eventSimple.getEventSimpleCity()}">Miasto</p>
+          </div>
+          <div class="col-md-1">
+            <p class="table-city-paragraph table-date-paragraph" th:text="${eventSimple.getEventSimpleDate()}">Data</p>
+          </div>
+          <div class="col-md-1">
+            <p class="table-city-paragraph" th:text="${eventSimple.getEventSimpleStartTime()}">Godzina</p>
+          </div>
+          <div class="col-md-8">
+            <a href=# th:href="@{/singleEvent(id=${eventSimple.getEventSimpleId()})}" style="text-decoration: none">
+              <p class="table-city-paragraph" th:text="${eventSimple.getEventSimpleName()}">Nazwa wydarzenia</p>
+            </a>
+          </div>
+          <div class="col-md-1">
+            <p class="table-city-paragraph">Ulubione</p>
+          </div>
+      </div>
+  </div>
+
+
+
+
+</main>
+
+
+
+<div class="p-3 bg-dark text-white" style="margin-top: 30px">
+  <footer class="footer mt-5 mb-1 bg-light bg-dark text-white">
+    <div class="container">
+      <span class="footer">&copy 2021, <a href = "mailto: kontakt@xyz.pl" class="footer">kontakt@xyz.pl</a></span>
+    </div>
+  </footer>
+</div>
+
+<script type="text/javascript" src="../static/js/popper.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script>
+
+</body>
+</html>

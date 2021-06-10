@@ -1,0 +1,211 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="utf-8">
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.83.1">-->
+  <title>TFU - Strona główna</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<!--  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>-->
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/style_home.css">
+  <link rel="stylesheet" type="text/css" href="css/bsstyle.css">
+</head>
+<body>
+<header>
+  <div class="container-fluid header-style">
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-1">
+        <img src="images/16597512641621316808-128.png" style="width: 48px" alt="Logotype">
+      </div>
+      <div class="col-md-3">
+        <ul class="nav col-10 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="margin-right: 400px">
+          <li><a href="/main" class="nav-link px-2 text-secondary">Strona główna</a></li>
+          <li><a href="/allEvents" class="nav-link px-2 text-white">Lista wydarzeń</a></li>
+          <li><a href="/faq" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="/aboutUs" class="nav-link px-2 text-white">O nas</a></li>
+          <li><a href="/contact" class="nav-link px-2 text-white">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-4">
+        <form class="form-header-button" style="display:inline!important" action="#" method="post" th:action="@{/login}">
+          <button type="submit" name="login" class="btn btn-outline-light me-2 button-header">Zaloguj się</button>
+        </form>
+        <form class="form-header-button" style="display:inline!important" action="#" method="post" th:action="@{/register}">
+          <button type="submit" name="register" class="btn btn-warning">Rejestracja</button>
+        </form>
+        <img src="images/pl.png" style="width: 32px; margin-left: 50px; margin-right: 20px" alt="pl">
+        <img src="images/en.png" style="width: 32px; margin-right: 20px" alt="pl">
+        <img src="images/de.png" style="width: 32px; " alt="pl">
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <div class="mx-5 my-2 bg-light rounded-3">
+      <div class="container-fluid mx-5">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Strona główna</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mx-5 my-2 bg-light rounded-3">
+      <div class="container-fluid mx-5 my-2">
+        <h1 class="display-5 fw-bold">Sprawdź najnowsze wydarzenia!</h1>
+        <p class="col-md-8 fs-4">Nie przegap okazji do dobrej zabawy!</p>
+      </div>
+    </div>
+
+    <div class="mx-5 my-2 text-center">
+      <div class="py-3">
+        <div class="mx-auto">
+          <h1 class="fw-light" style="font-size: 25px; font-weight: bold">Najbliższe imprezy</h1>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="album py-1 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-5 my-2 text-center">
+      <div class="py-3">
+        <div class="mx-auto mt-4">
+          <h1 class="fw-light" style="font-size: 25px; font-weight: bold">Ostatnio dodane wydarzenia</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="album py-1 bg-light">
+      <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-5 mb-1 bg-light">
+    <div class="container" style="justify-content: center">
+      <span class="footer">&copy 2021, <a href = "mailto: kontakt@xyz.pl" class="footer">kontakt@xyz.pl</a></span>
+    </div>
+  </footer>
+</body>
+</html>
